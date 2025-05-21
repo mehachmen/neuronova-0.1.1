@@ -15,7 +15,11 @@ class GameActivity : AppCompatActivity() {
         bottomNav.selectedItemId = R.id.nav_home
         bottomNav.setOnNavigationItemSelectedListener { item ->
             when(item.itemId) {
-                R.id.nav_home -> true
+                R.id.nav_home -> {
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
                 R.id.nav_leaderboard -> {
                     startActivity(Intent(this, RatingActivity::class.java)); finish(); true
                 }
