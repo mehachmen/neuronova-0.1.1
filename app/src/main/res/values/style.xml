@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NeuroNova011" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Цвета -->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/light_bg</item>
+        <item name="android:windowBackground">@android:color/white</item>
+
+        <!-- Кнопки -->
+        <item name="buttonStyle">@style/Widget.MaterialComponents.Button</item>
+
+        <!-- Элементы EditText -->
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+
+        <!-- Использовать Material компоненты -->
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
+    </style>
+</resources>

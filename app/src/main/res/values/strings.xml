@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NeuroNova 0.1.1</string>
+    <string-array name="memory_facts">
+        <item>У мозга нет болевых рецепторов</item>
+        <item>Воспоминания лучше сохраняются в возрасте от 15 до 25 лет</item>
+        <item>Левши имеют лучшую память</item>
+        <item>Фотографии стирают память</item>
+        <item>Депрессия сокращает память</item>
+        <item>Память лучше работает на свежем воздухе</item>
+        <item>Воспоминания не хранятся в одном месте</item>
+        <item>Первые воспоминания появляются до рождения</item>
+    </string-array>
+    <string name="memory">Память</string>
+    <string name="fact_memory">Факт памяти</string>
+    <string name="game_1">Игра 1</string>
+    <string name="star_icon_desc">Нейрончик</string>
+</resources>

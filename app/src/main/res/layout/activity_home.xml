@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/light_bg"
+    tools:context=".ui.theme.HomeActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- Верхний ряд карточек -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCurrency1"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:backgroundTint="@color/light_bg"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_fire" />
+
+            <TextView
+                android:id="@+id/tvFactCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/mainTextColor"
+                android:text="365"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Вторая карточка -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCurrency2"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:backgroundTint="@color/light_bg"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_pstar" />
+
+            <TextView
+                android:id="@+id/tvStarCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/mainTextColor"
+                android:text="985"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <FrameLayout
+        android:id="@+id/factBubbleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:minWidth="180dp"
+        android:minHeight="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardGame1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardCurrency1">
+
+        <ImageView
+            android:id="@+id/factBubbleImage"
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/fact_bubble" />
+
+        <TextView
+            android:id="@+id/tvFact"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxWidth="200dp"
+            android:maxLines="3"
+            android:padding="12dp"
+            android:text="У мозга нет болевых рецепторов"
+            android:textColor="@android:color/tertiary_text_dark"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivInfo"
+        android:layout_width="122dp"
+        android:layout_height="124dp"
+        android:contentDescription="Нейрончик"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@id/factBubbleContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/factBubbleContainer"
+        app:layout_constraintTop_toTopOf="@id/factBubbleContainer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGame1"
+        android:layout_width="286dp"
+        android:layout_height="360dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardCurrency1">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_bg"
+            android:gravity="center"
+            android:text="Игра 1"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Нижняя навигация -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bottom_nav_bg"
+            app:elevation="6dp"
+            app:itemIconTint="@color/purple"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvMemory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Память"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainTextColor"
+        app:layout_constraintTop_toBottomOf="@+id/factBubbleContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
